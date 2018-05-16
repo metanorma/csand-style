@@ -7,6 +7,18 @@
    License: none (public domain)
 */
 
+
+/* Colors
+
+Orange: #EE9C4F
+Blue: #4D7EA5
+Drak Gray: #A5A8AB
+Gray: #B1B6B8
+Light Gray: #F5F6F6
+
+*/
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -97,7 +109,7 @@ table {
         position: fixed;
         height: 100%;
         width: 30px;
-        background-color:#1d1d1d;
+        background-color:#4D7EA5;
         color: white!important;
         cursor: pointer;
         z-index: 100;
@@ -151,7 +163,7 @@ table {
 }
 
 #toc a {
-    color: #00549f;
+    color: #4D7EA5;
     text-decoration: none;
     display: block;
 }
@@ -173,8 +185,8 @@ table {
 }
 
 #toc .toc-active, #toc li:hover {
-    background: #1d1d1d;
-    box-shadow: inset -5px 0px 10px -5px #1d1d1d!important;
+    background: #4D7EA5;
+    box-shadow: inset -5px 0px 10px -5px #4D7EA5!important;
 
 }
 
@@ -331,7 +343,7 @@ p.document-stage {
 
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Overpass', sans-serif;
-    color: #00427e;
+    color: black;
     font-weight: 600;
     margin-top: 2em;
     margin-bottom: 0.3em;
@@ -393,27 +405,27 @@ p.document-stage {
 
     a, a:visited{
         text-decoration: none;
-        color: #00549f;
+        color: #4D7EA5;
     }
 
     a:hover {
         color: white;
-        background: #1d1d1d;
-        box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d;
+        background: #4D7EA5;
+        box-shadow: 3px 0 0 #4D7EA5, -3px 0 0 #4D7EA5;
         /* padding: 2px 0 2px 0; */
     }
 
     ::selection {
-        background: #1d1d1d; /* WebKit/Blink Browsers */
+        background: #4D7EA5; /* WebKit/Blink Browsers */
         color: white;
       }
       ::-moz-selection {
-        background: #1d1d1d; /* Gecko Browsers */
+        background: #4D7EA5; /* Gecko Browsers */
         color: white;
       }
 
       .contact-info a:hover {
-          color: #00549f;
+          color: #4D7EA5;
           text-decoration: underline;
           background: none;
           box-shadow: 0 0 0 0;
@@ -457,11 +469,14 @@ p.Biblio {
 
 .figure, .Sourcecode {
     font-family: 'Space Mono', monospace;
-    background-color: #f7f7f7;
     font-size: 0.8em;
     line-height: 1.6em;
     padding: 1.5em;
-    margin: 2em 0 1em 0;
+    background-color: #F5F6F6;
+    border-left: solid 5px #B1B6B8;
+    color: rgb(91, 94, 95);
+    padding: 1.2em 1.2em 1.2em 2.2em;
+    margin: 2em 0 2em -1em;;
     overflow: auto;
 }
 
@@ -475,11 +490,12 @@ p.Biblio {
     3.7 Notes
 */
 
-.note {
-    background-color: #fff495;
-    color: #47430c;
-    padding: 1.2em;
-    margin: 2em 0 1em 0;
+.note, .Note {
+    background-color: #F5F6F6;
+    border-left: solid 5px #B1B6B8;
+    color: rgb(91, 94, 95);
+    padding: 1.2em 1.2em 1.2em 2.2em;
+    margin: 2em 0 2em -1em;;
 }
 
 /*
@@ -487,9 +503,11 @@ p.Biblio {
 */
 
 .example {
-    background-color: #e1eef1;
-    padding: 1.2em;
-    margin: 2em 0 1em 0;
+    background-color: #F5F6F6;
+    border-left: solid 5px #B1B6B8;
+    color: rgb(91, 94, 95);
+    padding: 1.2em 1.2em 1.2em 2.2em;
+    margin: 2em 0 2em -1em;;
 }
 
 .example .example-title {
@@ -503,20 +521,23 @@ p.Biblio {
     3.9 Tables
 */
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-weight: 300;
-  margin: 1em 0 2em 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 2em;
-}
+
 
 table, th, td {
-  border: 1px solid black;
+  border: none!important;
   font-size: 0.95em;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 300;
+    margin: 1em 0 2em 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2em;
+    border: solid 1px #F5F6F6!important;
+  }
 
 td, th {
   padding: 1em;
@@ -524,6 +545,16 @@ td, th {
 
 td.header {
   font-weight: 400;
+}
+
+tr:nth-child(even) {
+    background-color: #FBF9F8;
+}
+
+thead {
+    background-color: #4D7EA5;
+    color: white;
+    border: none;
 }
 
 p.TableTitle {
@@ -551,13 +582,12 @@ a.footnote-number {
 */
 
 .blockquote {
-    background-color: #f7f7f7;
+    background-color: #F5F6F6;
+    border-left: solid 5px #B1B6B8;
+    color: rgb(91, 94, 95);
+    padding: 1.2em 1.2em 1.2em 2.2em;
+    margin: 2em 0 2em -1em;;
     font-style: italic;
-    width: 80%;
-    padding: 1.5em;
-    margin-top: 2em;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 
@@ -566,9 +596,11 @@ a.footnote-number {
 */
 
 .formula {
-    background-color: #f7f7f7;
-    padding: 1.5em;
-    margin-top: 2em;
+    background-color: #F5F6F6;
+    border-left: solid 5px #B1B6B8;
+    color: rgb(91, 94, 95);
+    padding: 1.2em 1.2em 1.2em 2.2em;
+    margin: 2em 0 2em -1em;;
     text-align: center;
 }
 
@@ -628,9 +660,9 @@ p {
     4.1 Top Logo
 */
 
-.wrapper-top {
-    background-color:#00427e;
-    background-image: url("img/dots@2x.png");
+.coverpage {
+    background: radial-gradient(#2D5D8E, #0D1E2B);
+    /*background-image: url("img/dots@2x.png");*/
     color: #ffffff;
     padding: 2em 0;
 }
@@ -660,29 +692,40 @@ p {
     text-align: center;
   }
 
-  .coverpage-logo span, .coverpage-tc-name span {
-    font-family: 'Overpass', sans-serif;
-      text-transform: uppercase;
-      font-weight: 600;
+  .coverpage-logo {
+      margin-top: 2em;
+      margin-bottom: 2em;
   }
 
-  .coverpage-tc-name {
-    font-size: 1.2em;
-    line-height: 1.2em;
-    margin: 0.25em 0;
+  .coverpage-logo span {
+    font-family: 'Overpass', sans-serif;
+      text-transform: uppercase;
+      font-weight: 300;
+      display: block;
   }
+
 
 /*
     4.2 Document Identity
 */
 
-  .coverpage-doc-identity {
+  .title-first {
     font-size: 2em;
     line-height: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline solid #EE9C4F;
+    margin-top: 3em;
   }
 
-  .coverpage-doc-identity .logo {
-    background-color: #fff;
+  .title-second {
+      font-size: 1.5em;
+      line-height: 2em;
+      font-weight: 600;
+      text-transform: uppercase;
+  }
+
+  .coverpage-doc-identity {
     background-image: url("img/csa.png"); /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
@@ -699,12 +742,42 @@ p {
   .coverpage-stage-block {
     font-family: 'Overpass', sans-serif;
     font-weight: 700;
-    font-size: 1.25em;
-    margin: 2em 0em 2em 0em;
+    font-size: 1em;
+    margin: 1em 0em 1em 0em;
     text-transform: uppercase;
   }
 
 
+.section-title {
+    background: linear-gradient(#A5A8AB, #B1B6B8);
+    padding: 4em 2em 3em 5.5em;
+    margin: 4em -3em 3em -5em;
+    border-bottom: 8px solid #EE9C4F;
+}
+
+.section-title .super-title {
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 1em;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.section-title h1 {
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: white;
+    text-transform: none;
+}
+
+h2 {
+    border-bottom: solid 1px #4D7EA5;
+    color: black;
+}
 
 
 /*
@@ -775,3 +848,17 @@ To top button
 
   #myBtn:hover {
     opacity: 1;
+  }
+
+
+@page {
+    margin: 1cm;
+}
+
+@media print {
+    .section-title {page-break-before: always;}
+    nav, #toc, #toggle, .document-stage-band,
+    .document-type-band {display: none;}
+    .container {padding-left: 0;}
+
+}
