@@ -36,7 +36,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'Overpass', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -83,7 +83,7 @@ table {
   main {margin: 0 3em 0 6em;}
 
   #toc{
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
   }
 
@@ -216,7 +216,7 @@ table {
     position: fixed;
     display: block;
     z-index: 98;
-    box-shadow: -5px 0px 10px #1d1d1d
+    /*box-shadow: -5px 0px 10px #1d1d1d*/
 }
 
 .document-type {
@@ -261,8 +261,8 @@ p.document-stage {
     height:160px;
 }
 
-#standard-band {
-    background-color: #0ac442;
+#standard-band p {
+   color: #0ac442;
 }
 
 #standard {
@@ -286,7 +286,7 @@ p.document-stage {
 }
 
 .coverpage-maturity {
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 1em;
     margin: 0 0 2em 0;
@@ -297,8 +297,8 @@ p.document-stage {
     border-bottom: solid 3px #fda706;
 }
 
-#working-draft-band {
-    background-color: #fda706;
+#working-draft-band p {
+    color: #fda706;
 }
 
 #committee-draft {
@@ -321,9 +321,6 @@ p.document-stage {
     border-bottom: solid 3px #0ac442;
 }
 
-#standard-band {
-    background-color: #0ac442;
-}
 
 #obsolete {
     border-bottom: solid 3px #7e0d13;
@@ -342,7 +339,7 @@ p.document-stage {
 */
 
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: black;
     font-weight: 600;
     margin-top: 2em;
@@ -350,7 +347,7 @@ p.document-stage {
   }
 
   h1 {
-    font-size: 1.4em;
+    font-size: 1.8em;
     text-transform: uppercase;
     margin-top: 2em;
   }
@@ -359,9 +356,9 @@ p.document-stage {
       margin-top: 2em;
   }
 
-  h2 {font-size: 1.3em; }
+  h2 {font-size: 1.6em; }
 
-  h3 {font-size: 1.1em;}
+  h3 {font-size: 1.5em;}
 
   span[id^="toc"]:after {
     float: left;
@@ -469,7 +466,7 @@ p.Biblio {
 
 .figure, .Sourcecode {
     font-family: 'Space Mono', monospace;
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 1.6em;
     padding: 1.5em;
     background-color: #F5F6F6;
@@ -525,7 +522,7 @@ p.Biblio {
 
 table, th, td {
   border: none!important;
-  font-size: 0.95em;
+  font-size: 1em;
 }
 
 table {
@@ -640,7 +637,7 @@ a.footnote-number {
 */
 
 span.keyword {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /*
@@ -648,6 +645,8 @@ span.keyword {
 */
 
 p {
+    font-size: 1.2em;
+    line-height: 1.5;
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -669,12 +668,12 @@ p {
 
   .doc-number {
       font-size: 0.5em;
-      font-family: 'Overpass', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
   }
 
   .coverpage-title {
       padding-bottom: 0.5em;
-      font-family: 'Overpass', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
       font-size: 1.5em;
       font-weight: 900;
   }
@@ -694,15 +693,19 @@ p {
 
   .coverpage-logo {
       margin-top: 2em;
-      margin-bottom: 2em;
+      margin-bottom: 6em;
   }
 
   .coverpage-logo span {
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
       text-transform: uppercase;
       font-weight: 300;
       display: block;
   }
+
+.document-info {
+    margin: 3em 3em 2em 5em;
+}
 
 
 /*
@@ -710,29 +713,31 @@ p {
 */
 
   .title-first {
-    font-size: 2em;
+    font-size: 3em;
     line-height: 2em;
     font-weight: 900;
     text-transform: uppercase;
     text-decoration: underline solid #EE9C4F;
-    margin-top: 3em;
+    margin-top: 2em;
   }
 
   .title-second {
-      font-size: 1.5em;
+      font-size: 2em;
       line-height: 2em;
-      font-weight: 600;
-      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 1px;
   }
 
   .coverpage-doc-identity {
-    background-image: url("img/csa.png"); /* background-attachment: fixed; */
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100px;
     width: 100%;
-    background-size: 240px 80px;
-    margin: auto;
+    height: 50px;
+    margin: 2em 0;
+}
+
+    img.csa-logo {
+    height: 50px;
+    float: right;
+    margin-right: 2em;
   }
 
   .coverpage-title .title-second {
@@ -740,7 +745,7 @@ p {
   }
 
   .coverpage-stage-block {
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     font-size: 1em;
     margin: 1em 0em 1em 0em;
@@ -795,7 +800,7 @@ h2 {
 
   .coverpage-warning .title {
     color: #f36f36;
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.2em;
