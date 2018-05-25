@@ -861,9 +861,52 @@ To top button
 }
 
 @media print {
-    .section-title {page-break-before: always;}
-    nav, #toc, #toggle, .document-stage-band,
-    .document-type-band {display: none;}
-    .container {padding-left: 0;}
+
+    .section-title, .document-info,  nav {
+        page-break-before: always;
+    }
+
+    .coverpage {
+        height: 23cm;
+    }
+
+    .coverpage-doc-identity {
+        position: absolute;
+        bottom: 1cm;
+    }
+
+    #toggle, .document-stage-band,
+    .document-type-band {
+        display: none;
+    }
+
+    .container {
+        padding-left: 0;
+    }
+
+    nav {
+        position: relative;
+        width: auto;
+        font-size: 0.9em;
+        overflow: auto;
+        padding: 0;
+        margin-right: 0;
+        background-color: white; 
+    }
+    
+      #toc .toc-active a {
+      color: #4D7EA5; 
+    }
+    
+      #toc .toc-active, #toc li:hover {
+      background: white;
+      box-shadow: none !important; }
+    
+      #toc li:hover a {
+      color: black; }
+    
+    
+      h1.toc-contents {
+        margin-top: 2em; }
 
 }
