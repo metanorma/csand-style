@@ -863,6 +863,14 @@ nav h1:hover a:after {
     display: none;
 }
 
+.document-stage-band p {
+    color: #EE9C4F!important;
+}
+
+.document-type-band p {
+    color: #4D7EA5!important;
+}
+
 
 @page {
     margin: 1cm;
